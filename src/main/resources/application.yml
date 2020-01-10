@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: demo
+  #setting up datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?UTC&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+
+
+  ## mybatis 配置
+mybatis:
+  # 参数类型的包别名设置
+  type-aliases-package: com.allen.pojo
+  # 指向映射的xml文件
+  mapper-locations: classpath:mapper/*.xml
